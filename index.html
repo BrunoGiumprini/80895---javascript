@@ -1,35 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de turnos</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestor de turnos -- Entrega 2</title>
+
 </head>
 
 <body>
-    <h1>Bienvenido, reserve su horario</h1>
-    <!-- <table>
-        <tr>
-            <td><a href="/ver">1. Ver turnos</a></td>
-        </tr>
-        <tr>
-            <td><a href="/reservar">2. Mis turnos</a></td>
-        </tr>
-        <tr>
-            <td><a href="/eliminar">3. Reservar turno</a></td>
-        </tr>
-        <tr>
-            <td><a href="/modificar">4. Elminar reserva</a></td>
-        </tr>
-    </table> -->
-    <p>Pasos para utilizar el programa:
-        <br>1. Presione cancelar en la alerta que aparece al iniciar la página.
-        <br>2. Abra la consola del navegador (F12 o Ctrl+Shift+I).
-        <br>3. Refresce la página (F5).
-        <br>4. Realize le operacion que desee (ver, reservar, eliminar, modificar o salir).
-    </p>
-    <script src="main.js"></script>
+  <header>
+    <h1>Gestor de Turnos</h1>
+    <p>Gracias por elegir nuestro gestor de turnos</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <label for="horarioSelect">Horario:</label>
+      <select id="horarioSelect"></select>
+      <button id="reservarBtn" class="primary">Reservar</button>
+      <button id="verReservasBtn" class="ghost">Mis reservas</button>
+      <div id="msg" class="msg" aria-live="polite"></div>
+    </section>
+
+    <section id="reservasPanel" class="card hidden" aria-live="polite">
+      <div class="toolbar">
+        <h2>Mis reservas</h2>
+        <button id="cerrarPanel" class="ghost">Cerrar</button>
+      </div>
+      <table id="reservasTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Horario</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
