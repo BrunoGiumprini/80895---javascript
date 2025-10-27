@@ -1,0 +1,146 @@
+:root {
+    --bg: #0f1115;
+    --fg: #e6e6e6;
+    --muted: #a7a7a7;
+    --card: #151823;
+    --accent: #ff6a00;
+    --accent-2: #ffb26b;
+    --ok: #28a745;
+    --danger: #e03131;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif
+}
+
+.container {
+    max-width: 980px;
+    margin-inline: auto;
+    padding: 1rem
+}
+
+header h1 {
+    margin: 0 0 .25rem 0
+}
+
+header p {
+    margin: 0;
+    color: var(--muted)
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid #222533;
+    border-radius: 14px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .25)
+}
+
+.hidden {
+    display: none
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+}
+
+.field label {
+    display: block;
+    font-size: .9rem;
+    color: var(--muted);
+    margin-bottom: .35rem
+}
+
+select,
+input[type=date] {
+    width: 100%;
+    padding: .6rem .75rem;
+    border: 1px solid #2a2f3d;
+    border-radius: 10px;
+    background: #0c0e14;
+    color: var(--fg)
+}
+
+.actions {
+    display: flex;
+    gap: .6rem;
+    margin-top: .75rem
+}
+
+button {
+    padding: .6rem .9rem;
+    border: 1px solid #2a2f3d;
+    border-radius: 10px;
+    background: #10131b;
+    color: var(--fg);
+    cursor: pointer
+}
+
+button.primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    border: none;
+    font-weight: 600
+}
+
+button.ghost {
+    background: transparent
+}
+
+button.btn-danger {
+    background: #2d0e10;
+    border-color: #4a1417;
+    color: #ffced1
+}
+
+button:hover {
+    filter: brightness(1.05)
+}
+
+.msg {
+    min-height: 1.25rem;
+    color: var(--accent-2);
+    margin-top: .5rem
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+th,
+td {
+    border-bottom: 1px solid #2a2f3d;
+    padding: .6rem .4rem;
+    text-align: left;
+    font-size: .95rem
+}
+
+th {
+    color: var(--muted);
+    font-weight: 600
+}
+
+.footnote {
+    opacity: .7;
+    text-align: center;
+    padding-bottom: 2rem
+}

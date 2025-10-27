@@ -4,22 +4,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gestor de turnos -- Entrega 2</title>
+  <title>ProyectoFinal+Apellido — Gestor de Turnos</title>
 
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Librería externa para reemplazar alert/prompt/confirm -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-  <header>
+  <header class="container">
     <h1>Gestor de Turnos</h1>
-    <p>Gracias por elegir nuestro gestor de turnos</p>
+    <p>Simulador interactivo — Propiedad ➜ Fecha ➜ Horario</p>
   </header>
 
-  <main>
-    <section class="card">
-      <label for="horarioSelect">Horario:</label>
-      <select id="horarioSelect"></select>
-      <button id="reservarBtn" class="primary">Reservar</button>
-      <button id="verReservasBtn" class="ghost">Mis reservas</button>
+  <main class="container">
+    <section class="card" id="bookingCard">
+      <div class="grid">
+        <div class="field">
+          <label for="propiedadSelect">Propiedad</label>
+          <select id="propiedadSelect" aria-label="Propiedad"></select>
+        </div>
+
+        <div class="field">
+          <label for="fechaInput">Fecha</label>
+          <input id="fechaInput" type="date" aria-label="Fecha" />
+        </div>
+
+        <div class="field">
+          <label for="horarioSelect">Horario</label>
+          <select id="horarioSelect" aria-label="Horario"></select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="reservarBtn" class="primary">Reservar</button>
+        <button id="verReservasBtn" class="ghost">Mis reservas</button>
+      </div>
+
       <div id="msg" class="msg" aria-live="polite"></div>
     </section>
 
@@ -32,6 +55,8 @@
         <thead>
           <tr>
             <th>#</th>
+            <th>Propiedad</th>
+            <th>Fecha</th>
             <th>Horario</th>
             <th>Acciones</th>
           </tr>
@@ -40,6 +65,10 @@
       </table>
     </section>
   </main>
+
+  <footer class="container footnote">
+    <small>ProyectoFinal+Giumprini — Coderhouse</small>
+  </footer>
 
   <script src="main.js"></script>
 </body>
